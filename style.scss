@@ -1,0 +1,339 @@
+@import "reset";
+
+* {
+    box-sizing: border-box;
+}
+ 
+
+header {
+    width: 100%;
+    height: 104px;
+    margin: 10px 0;
+    .container {
+        width: 100%;
+        max-width: 1450px;
+        margin: 0 auto;
+        padding: 0 10px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 266px 1fr 129px 170px;
+        a {
+            img {
+                width: 266px;
+                height: auto;
+            }
+        }
+        nav {
+            ul{
+                display: flex;
+                justify-content: space-evenly;
+                li {
+                    a {
+                        font-family: "Proxima Nova";
+                        font-size: 20px;
+                        font-weight: 600;
+                        line-height: 25px;
+                        text-align: center;
+                        &:hover {
+                            color: gray;
+                        }
+                    }
+                }
+            }
+        }
+        .burger {
+            display: none;
+            width: 40px;
+            height: 80px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+               span {
+                   background-color: black;
+                   width: 100%;
+                   height: 4px;
+        }
+        }
+        .social {
+            a {
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+        .info {
+            p {
+                font-family: "Proxima Nova";
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                text-align: left;
+            }
+            h4 {
+                font-family: "Proxima Nova";
+                font-size: 26px;
+                font-weight: 700;
+                line-height: 32.5px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: 405px;
+    display: flex;
+    position: relative;
+    margin-top: 218px;
+    .info {
+        max-width: 525px;
+        width: 100%;
+        background-color: #FFD00E;
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: relative;
+        z-index: 2;
+        a {
+            max-width: 266px;
+            width: 100%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        p {
+            font-family: "Proxima Nova";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+        }
+    }
+    .main_info {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+       .backgroung {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+       }
+       .content {
+        padding: 15px 20px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        .call {
+            max-width: 270px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            h3 {
+                font-family: "Proxima Nova";
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 30px;
+                text-align: left;
+                color: #FFFFFF;
+            }
+            h4 {
+                font-family: "Century Gothic";
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 30px;
+                text-align: left;
+                color: #FFFFFF;
+            }
+            p {
+                font-family: "Proxima Nova";
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 30px;
+                text-align: left;
+                color: #FFFFFF;
+            }
+            .social_footer {
+                display: flex;
+                gap: 15px;
+                a {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        .location {
+            max-width: 293px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            h3 {
+                font-family: "Proxima Nova";
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 30px;
+                text-align: left;
+                color: #FFFFFF;
+            }
+            h4 {
+                font-family: "Proxima Nova";
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 30px;
+                text-align: left;
+                color: #FFFFFF;
+            }
+            p {
+                font-family: "Proxima Nova";
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+                text-align: left;
+                color: #FFFFFF;
+            }
+        }
+        .startup {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h2 {
+                font-family: "Proxima Nova";
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 30px;
+                text-align: left;
+                color: #FFFFFF;
+            }
+            .photo_footer {
+                img {
+                    &:first-of-type {
+                        width: 95px;
+                        height: 59px;
+                    }
+                    &:last-of-type {
+                        width: 196px;
+                        height: 59px;
+                    }
+                }
+            }
+            .last_foto {
+                img {
+                    width: 207px;
+                    height: 34px;
+                }
+            }
+        }
+       }
+    }
+}
+
+
+@media (max-width: 1150px) {
+    header {
+        height: 200px;
+        .container {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 75px 60px;
+            grid-template-areas: "head-1 head-5"
+                                 "head-3 head-4";
+        a {
+            grid-area: head-1;
+        }
+        nav {
+            margin-top: 15px;
+            grid-area: head-2;
+            display: none;
+        }
+        .social {
+            grid-area: head-3;
+        }
+        .info {
+            grid-area: head-4;
+            margin-left: auto;
+        }
+        .burger {
+            display: flex;
+            grid-area: head-5;
+            margin-left: auto;
+        }
+        }
+        &.active {
+            .container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 75px 60px 65px;
+                grid-template-areas: "head-1 head-5"
+                                     "head-3 head-4"
+                                     "head-2 head-2";
+            }
+            nav {
+                display: block;
+                ul {
+                    flex-wrap: wrap;
+                    gap: 7px;
+                }
+                } 
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    header {
+        .container {
+            a {
+                img {
+                    width: 150px;
+                }
+            }
+            nav {
+                max-width: 400px;
+                margin: 0 auto;
+                ul {
+                    gap: 10px;
+                    li {
+                        a {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            .info {
+                p {
+                    font-size: 14px;
+                }
+                h4 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 415px) {
+    header {
+        .container {
+            nav {
+                max-width: 300px;
+                ul {
+                    li {
+                        a {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
